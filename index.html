@@ -8,6 +8,12 @@
 		<link rel="import" href="components/hello-world.html" />
 	</head>
 	<body>
-		<hello-world name="Sam"></hello-world>
+		<input type="text" id="name_input" />
+		<hello-world id="name_display" name="user"></hello-world>
+		<script>
+			name_input.addEventListener('keyup', function() {
+				name_display.name = this.value;
+			});
+		</script>
 	</body>
 </html>
