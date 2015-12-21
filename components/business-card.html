@@ -1,0 +1,90 @@
+<dom-module id="business-card">
+	<template>
+		<div class="card">
+			<h1 class="name">[[name]]</h1>
+			<h3 class="role">[[role]]</h3>
+			<h4 class="company">[[company]]</h4>
+		</div>
+		<div class="input-container">
+			<label>Name </label>
+			<br/>
+			<input type="text" id="name_input" value={{name::keyup}}/>
+			<br/>
+			<label>Company </label>
+			<br/>
+			<input type="text" id="company_input" value={{company::keyup}}/>
+			<br/>
+			<label>Role </label>
+			<br/>
+			<input type="text" id="role_input" value={{role::keyup}}/>
+		</div>
+		
+
+		<!-- Styles -->
+		<style>
+			.card {
+				background: #DDD;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				height: 200px;
+				margin: 2rem;
+				position: relative;
+				text-align: center;
+				width: 400px;
+			}
+			.card .company {
+				bottom: 0;
+				position: absolute;
+				right: 20px;
+			}
+			.card .name {
+				padding-top: 30px;
+			}
+			.input-container {
+				margin: 2rem;
+				position: relative;
+				width: 400px;
+			}
+			.input-container input[type=text] {
+				font-size: 1.5rem;
+				margin: 5px 0 10px 0;
+				padding: 3px 0;
+				width: 395px;
+			}
+			.input-container label {
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 5px 0;
+				padding: 3px 0;
+			}
+
+		</style>
+	</template>
+	<script>
+		Polymer({
+			is: "business-card",
+			created: function() {
+				this.log('created');
+			},
+			ready: function() {
+				this.log('ready');
+				this.name = "Name";
+				this.company = "Company";
+				this.role = "Role";
+			},
+			attached: function() {
+				this.log('attached');
+			},
+			detached: function() {
+				this.log('detached');
+			},
+			attributeChanged: function(name, oldValue, newValue) {
+				this.log('attributeChanged');
+			},
+			log: function(message) {
+				console.log(this.is + ' component: ' + message);
+			}
+		})
+	</script>
+</dom-module>
