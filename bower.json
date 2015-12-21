@@ -1,0 +1,18 @@
+{
+  "name": "learn-web-components",
+  "description": "Following the Egghead.io tutorial for Web Components using Polymer",
+  "main": "index.html",
+  "authors": [
+    "Sam Reaves <thesamreaves@gmail.com> (http://www.github.com/samreaves)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/samreaves/learn-web-components",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
