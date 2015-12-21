@@ -5,13 +5,28 @@
 		<title>Learning Web Components</title>
 		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 		<link rel="import" href="bower_components/polymer/polymer.html" />
-		<link rel="import" href="components/hello-user.html" />
+		<link rel="import" href="components/business-card.html" />
+		<style>
+			* {
+				font-family: arial;
+			}
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
 	</head>
 	<body>
-		<hello-user id="name_display" name="user"></hello-user>
+		<business-card id="business_card" name="" company="" role=""></business-card>
 		<script>
 			name_input.addEventListener('keyup', function() {
-				name_display.name = this.value;
+				business_card.name = this.value;
+			});
+			company_input.addEventListener('keyup', function() {
+				business_card.company = this.value;
+			});
+			role_input.addEventListener('keyup', function() {
+				business_card.role = this.value;
 			});
 		</script>
 	</body>
