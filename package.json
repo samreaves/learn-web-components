@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Following the Egghead.io tutorial for Web Components using Polymer",
   "main": "index.html",
-  "scripts": {
+ "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/samreaves/learn-web-components/issues"
   },
-  "homepage": "https://github.com/samreaves/learn-web-components#readme"
+  "homepage": "https://github.com/samreaves/learn-web-components#readme",
+  "devDependencies": {
+    "http-server": "0.8.5"
+  }
 }
